@@ -1,3 +1,5 @@
+source ${0:a:h}/zsh-shift-select/zsh-shift-select.plugin.zsh
+
 PROMPT='%b%F{#0b98de}%~ %f
 %? %F{#fd9014}%(!.#.>) %f'
 autoload -Uz vcs_info
@@ -12,7 +14,8 @@ alias l='ls -CF'
 alias vim='nvim'
 alias c='clear'
 
-# fix ctrl-left and ctrl-right
+# fix ctrl-left, ctrl-right, and ctrl-backspace
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey '^H' backward-kill-word
 
