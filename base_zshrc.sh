@@ -12,3 +12,7 @@ alias l='ls -CF'
 alias vim='nvim'
 alias c='clear'
 
+# fix ctrl-left and ctrl-right
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
